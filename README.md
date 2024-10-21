@@ -16,3 +16,8 @@ If you delete the `cfg` file or leave it empty, the module will automatically de
 
 #Questions?
 [ask here](https://t.me/scr1ptcraftchat)
+
+
+#Download
+
+[Download Latest Release](https://github.com/rhythmcache/video-to-bootanimation/releases/download/v2/mpfour2bootEd.zip)
