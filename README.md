@@ -9,9 +9,10 @@ If you delete the `cfg` file or leave it empty, the module will automatically de
 
 # Bugs
 - Might not work on MIUI/HyperOS.
-- Script doesn’t terminate on HyperOS: KernelSU may show the status as "flashing" even though the flashing process is complete. As soon as you see `done` in the output, press the back button.
+- Might not work on devices of non-arm64 architecture , to fix you have to put `ffmpeg` and `zip` binary of respective architecture to the module"s bin folder. (you have to find the binary by yourself)
+- Script doesn’t terminate : KernelSU may show the status as "flashing" even though the flashing process is complete. As soon as you see `done` in the output, press the back button.
 - The module doesn’t appear in the KernelSU/Magisk module list until you reboot the device.
 
 
 #Questions?
-[ask here](https://t.me/rhyphxc)
+[ask here](https://t.me/scr1ptcraftchat)
