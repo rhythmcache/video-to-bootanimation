@@ -1,3 +1,5 @@
+#video2bootanimation by @e1phn
+
 ui_print "-------------------------------------------------- "
 ui_print " Video to Bootanimation                            "
 ui_print "-------------------------------------------------- "
@@ -6,10 +8,11 @@ ui_print "-------------------------------------------------- "
 ui_print "-------------------------------------------------- " 
 ui_print " "
 
-# Path to zip and ffmpeg in the module's bin directory
+# Path to zip, ffmpeg, and additional files in the module's bin directory
 zipbin="$MODPATH/bin/zip"
 ffmpeg="$MODPATH/bin/ffmpeg"
 cfg_file="$MODPATH/bin/cfg"
+webroot_source="$MODPATH/webroot"
 
 # Ensure zip and ffmpeg have executable permissions
 chmod +x "$zipbin"
@@ -29,6 +32,7 @@ fi
 
 ui_print " -- Found video: $video"
 ui_print " "
+
 
 # Default resolution and frame rate
 default_frame_rate=26
@@ -158,6 +162,10 @@ cd "$TMP_DIR/result" || abort "CANNOT change to result directory"
 cd $TMP_DIR/result/
 su -c $zipbin -r -0 /data/local/bootanimation.zip ./*
 
+# Copy Index.html
+mkdir $MODPATH/webroot
+cp $MODPATH/index.html $MODPATH/webroot
+
 # Check if original bootanimation.zip exists and place the new one systemlessly
 ui_print " -- Checking where original bootanimation.zip is located..."
 
@@ -187,5 +195,9 @@ set_perm_recursive $MODPATH 0 0 0755 0644
 set_perm_recursive $MODPATH/system/media 0 0 0755 0755
 set_perm_recursive $MODPATH/system/product/media 0 0 0755 0755
 
-# Exit the script
+# Exit the 
+rm -R $MODPATH/bin
+rm -R /data/local/tmp/bootanim
+rm $MODPATH/index.html
+rm $MODPATH/customize.sh
 exit 0
