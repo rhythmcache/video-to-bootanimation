@@ -11,7 +11,7 @@ ui_print " "
 # Path to zip, ffmpeg, and additional files in the module's bin directory
 zipbin="$MODPATH/bin/zip"
 ffmpeg="$MODPATH/bin/ffmpeg"
-cfg_file="$MODPATH/bin/cfg"
+cfg_file="/sdcard/cfg"
 webroot_source="$MODPATH/webroot"
 
 # Ensure zip and ffmpeg have executable permissions
@@ -169,9 +169,9 @@ cp $MODPATH/index.html $MODPATH/webroot
 # Check if original bootanimation.zip exists and place the new one systemlessly
 ui_print " -- Checking where original bootanimation.zip is located..."
 
-if [ -f "/system/product/media/bootanimation.zip" ]; then
-   ui_print " -- Original bootanimation.zip found in /system/product/media"
-   dest_dir="$MODPATH/system/product/media/"
+if [ -f "/product/media/bootanimation.zip" ]; then
+   ui_print " -- Original bootanimation.zip found in /product/media"
+   dest_dir="$MODPATH/product/media/"
 elif [ -f "/system/media/bootanimation.zip" ]; then
    ui_print " -- Original bootanimation.zip found in /system/media"
    dest_dir="$MODPATH/system/media/"
@@ -193,6 +193,7 @@ ui_print " "
 # Set permissions for the module
 set_perm_recursive $MODPATH 0 0 0755 0644
 set_perm_recursive $MODPATH/system/media 0 0 0755 0755
+set_perm_recursive $MODPATH/product/media 0 0 0755 0755
 set_perm_recursive $MODPATH/system/product/media 0 0 0755 0755
 
 # Exit the 
