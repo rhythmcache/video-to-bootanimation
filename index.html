@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hello There</title>
     <style>
-        /* Global Styles */
         body {
             font-family: 'Poppins', sans-serif;
             text-align: center;
@@ -19,24 +18,15 @@
             justify-content: center;
             align-items: center;
         }
-        
-        /* Smooth transitions */
-        * {
-            transition: all 0.3s ease;
-            box-sizing: border-box;
-        }
 
-        /* Main heading */
         h1 {
             font-size: 3em;
             margin: 20px;
-            animation: fadeInDown 1s ease-out;
             letter-spacing: 3px;
             font-weight: 600;
             text-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
         }
 
-        /* Video frame container */
         .video-frame {
             width: 100%;
             max-width: 720px;
@@ -47,38 +37,27 @@
             background: rgba(255, 255, 255, 0.15);
             border-radius: 12px;
             overflow: hidden;
-            animation: fadeIn 1.5s ease-out;
         }
 
-        /* Connection error message */
-        #connectionMessage {
-            font-size: 1.2em;
-            color: #ff6b6b;
-            margin-top: 20px;
-            display: none;
-        }
-
-        /* Footer with link */
         .footer {
             margin-top: 40px;
             font-size: 18px;
             color: #f3e5ab;
-            animation: fadeInUp 1s ease-out;
         }
 
-        .footer a {
+        .copy-text {
             color: #ffeb3b;
-            text-decoration: none;
-            border-bottom: 1px solid transparent;
+            cursor: pointer;
+            display: inline-block;
+            border-bottom: 1px dashed transparent;
             padding-bottom: 3px;
         }
 
-        .footer a:hover {
+        .copy-text:hover {
             color: #fff;
-            border-bottom: 1px solid #fff;
+            border-bottom: 1px dashed #fff;
         }
 
-        /* Status box */
         .status {
             position: fixed;
             bottom: 20px;
@@ -89,26 +68,8 @@
             border-radius: 8px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
             font-size: 14px;
-            animation: fadeInUp 1s ease-out;
         }
 
-        /* Keyframes for smooth entrance animations */
-        @keyframes fadeIn {
-            from { opacity: 0; transform: scale(0.95); }
-            to { opacity: 1; transform: scale(1); }
-        }
-
-        @keyframes fadeInDown {
-            from { opacity: 0; transform: translateY(-30px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        @keyframes fadeInUp {
-            from { opacity: 0; transform: translateY(30px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        /* Responsive design */
         @media (max-width: 768px) {
             .video-frame {
                 height: 300px;
@@ -122,45 +83,44 @@
                 font-size: 12px;
             }
         }
-
-        /* Glow effect on hover */
-        h1:hover {
-            text-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
-        }
-
-        .footer a:hover {
-            text-shadow: 0 4px 8px rgba(255, 255, 255, 0.7);
-        }
     </style>
 </head>
 <body>
     <h1>Hello There</h1>
 
-    <!-- Video Frame Container -->
     <div id="videoContainer" class="video-frame">
         <iframe id="videoFrame" width="100%" height="100%" src="" frameborder="0" allowfullscreen></iframe>
     </div>
 
-    <!-- No connection message -->
-    <p id="connectionMessage">No internet connection. Video cannot be played.</p>
-    
-    <!-- Footer with Telegram link -->
     <div class="footer">
-        Join <a href="https://t.me/scr1ptcraftchat" target="_blank">@scr1ptcraftchat</a> on Telegram.
+        Join <span class="copy-text" id="copyText">@scr1ptcraftchat</span> on Telegram.
     </div>
 
-    <!-- Device status box -->
     <div class="status" id="deviceStatus">
         Checking device status...
     </div>
 
-    <!-- JavaScript for functionality -->
     <script>
-        // Check internet connection function
+        // Function to copy text to clipboard
+        function copyToClipboard(text) {
+            const tempInput = document.createElement('textarea');
+            tempInput.value = text;
+            document.body.appendChild(tempInput);
+            tempInput.select();
+            document.execCommand('copy');
+            document.body.removeChild(tempInput);
+            alert('Copied to clipboard: ' + text);
+        }
+
+        // Event listener for copy text
+        document.getElementById('copyText').addEventListener('click', function() {
+            copyToClipboard('@scr1ptcraftchat');
+        });
+
+        // Function to check internet connection
         function checkInternetConnection() {
             const videoFrame = document.getElementById('videoFrame');
             const videoContainer = document.getElementById('videoContainer');
-            const connectionMessage = document.getElementById('connectionMessage');
 
             if (navigator.onLine) {
                 const youtubeVideoId = 'dQw4w9WgXcQ'; // YouTube video ID
@@ -168,7 +128,7 @@
                 videoContainer.style.display = 'block'; // Show video frame
                 updateDeviceStatus(true);
             } else {
-                connectionMessage.style.display = 'block'; // Show connection message
+                videoContainer.style.display = 'none'; // Hide video frame if disconnected
                 updateDeviceStatus(false);
             }
         }
