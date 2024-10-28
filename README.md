@@ -15,10 +15,13 @@ If you delete the `cfg` file or leave it empty, the module will automatically de
 - I set a restriction in script about FPS that you cant increase it more than 45 , but it seems not be working,i tested and found out even 60FPS is working so i dont know if this is a bug or feature LOL
 
 
-#Use On Linux Terminals
-'wget https://github.com/rhythmcache/video-to-bootanimation/blob/main/forTerminals/genbootanim
+## Use On Linux Terminal or Termux
+
+```
+wget https://github.com/rhythmcache/payload-dumper-termux
 chmod +x ./genbootanim
-./genbootanim'
+./genbootanim
+```
 
 
 #Questions?
