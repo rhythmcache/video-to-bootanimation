@@ -18,9 +18,9 @@ If you delete the `cfg` file or leave it empty, the module will automatically de
 ## Use On Linux Terminal or Termux
 
 ```
-wget https://github.com/rhythmcache/video-to-bootanimation/blob/main/forTerminals/genbootanim
-chmod +x ./genbootanim
-./genbootanim
+wget https://github.com/rhythmcache/video-to-bootanimation/blob/main/forTerminals/genbootanim.sh
+chmod +x ./genbootanim.sh
+./genbootanim.sh
 ```
 
 
