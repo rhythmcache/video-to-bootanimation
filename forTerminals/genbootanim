@@ -1,12 +1,12 @@
 #!/bin/bash
 
-# Function to install a package
+# 
 install_package() {
   local package="$1"
   
-  # Detect package manager and install the package
-  if command -v apt &> /dev/null; then
-    sudo apt update && sudo apt install -y "$package"
+  # 
+  if command -v pkg &> /dev/null; then
+    pkg update && pkg install -y "$package"
   elif command -v dnf &> /dev/null; then
     sudo dnf install -y "$package"
   elif command -v pacman &> /dev/null; then
@@ -17,8 +17,8 @@ install_package() {
     sudo yum install -y "$package"
   elif command -v apk &> /dev/null; then
     sudo apk add "$package"
-  elif command -v pkg &> /dev/null; then  # Termux package manager
-    pkg update && pkg install -y "$package"
+  elif command -v apt &> /dev/null; then  # Termux package manager
+    sudo apt update && sudo apt install -y "$package"
   else
     echo "Error: Unsupported package manager. Please install $package manually."
     exit 1
@@ -53,7 +53,7 @@ fps=$(( fps > 45 ? 45 : fps ))
 read -p "Enter output path (e.g., /path/to/output.zip): " output_path
 
 # Temporary directory setup for processing
-TMP_DIR="/tmp/bootanim"
+TMP_DIR="~/bootanim"
 rm -rf "$TMP_DIR"
 mkdir -p "$TMP_DIR/frames" "$TMP_DIR/result"
 desc_file="$TMP_DIR/result/desc.txt"
