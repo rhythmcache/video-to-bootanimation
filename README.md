@@ -18,7 +18,7 @@ If you delete the `cfg` file or leave it empty, the module will automatically de
 ## Use On Linux Terminal or Termux
 
 ```
-wget https://github.com/rhythmcache/payload-dumper-termux
+wget https://github.com/rhythmcache/video-to-bootanimation/blob/main/forTerminals/genbootanim
 chmod +x ./genbootanim
 ./genbootanim
 ```
