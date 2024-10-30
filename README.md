@@ -24,9 +24,18 @@ chmod +x ./genbootanim.sh
 ./genbootanim.sh
 ```
 
+## Convert Bootanimation Zip to mp4 Video
+- Paste this in Linux terminal or termux
+
+
+```
+wget https://github.com/rhythmcache/video-to-bootanimation/releases/download/v2/boot2mp4.sh
+chmod +x ./boot2mp4.sh
+./boot2mp4.sh
+
 
 #Questions?
-[ask here](https://t.me/scr1ptcraftchat)
+[ask here](https://t.me/ximimodulo)
 
 
 #Download
