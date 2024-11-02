@@ -19,8 +19,8 @@ If you delete the `cfg` file or leave it empty, the module will automatically de
 - on terminals , it will just create a bootanimation zip , not a magisk module.
 
 ```
-wget https://github.com/rhythmcache/video-to-bootanimation/releases/download/v2/genbootanim.sh
-chmod +x ./genbootanim.sh
+curl -sSL https://github.com/rhythmcache/video-to-bootanimation/releases/download/v2/genbootanim.sh -o genbootanim.sh
+chmod +x genbootanim.sh
 ./genbootanim.sh
 ```
 
@@ -29,7 +29,7 @@ chmod +x ./genbootanim.sh
 
 
 ```
-wget https://github.com/rhythmcache/video-to-bootanimation/releases/download/v2/boot2mp4.sh
+curl -sSL https://github.com/rhythmcache/video-to-bootanimation/releases/download/v2/boot2mp4.sh -o boot2mp4.sh
 chmod +x ./boot2mp4.sh
 ./boot2mp4.sh
 ```
