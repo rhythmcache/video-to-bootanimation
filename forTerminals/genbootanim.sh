@@ -60,7 +60,7 @@ desc_file="$TMP_DIR/result/desc.txt"
 output_zip="$output_path"
 
 # Generate frames with ffmpeg
-ffmpeg -i "$video" -vf "scale=${width}:${height}" "$TMP_DIR/frames/frame%04d.jpg" || {
+ffmpeg -i "$video" -vf "scale=${width}:${height}" "$TMP_DIR/frames/%06d.jpg" || {
     echo "Error generating frames from video."
     exit 1
 }
@@ -75,7 +75,7 @@ echo "Processed $frame_count frames."
 
 # Create desc.txt
 echo "$width $height $fps" > "$desc_file"
-echo "p 1 0 frames" >> "$desc_file"
+#echo "p 1 0 frames" >> "$desc_file"
 
 # Pack frames into parts if more than 400 frames
 max_frames=400
@@ -102,7 +102,7 @@ done
 # Zip the bootanimation
 echo "Creating bootanimation.zip..."
 cd "$TMP_DIR/result" || { echo "Error accessing result directory."; exit 1; }
-zip -r "$output_zip" . || { echo "Error creating zip file."; exit 1; }
+zip -r -0 "$output_zip" . || { echo "Error creating zip file."; exit 1; }
 echo "Bootanimation created at $output_zip"
 
 # Clean up
