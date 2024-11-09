@@ -18,7 +18,8 @@ If you delete the `cfg` file or leave it empty, the module will automatically de
 ## Use On Linux Terminal or Termux
 - copy and paste this on termux or Linux terminal
 - creates a flashable magisk module
-- - Flash created zip in magisk or kernel su or aPatch
+- no need to create cfg or rename video , script will prompt to enter path 
+- Flash created zip in magisk or kernel su or aPatch
 ```
 curl -sSL https://github.com/rhythmcache/video-to-bootanimation/releases/download/v2/cbootanim.sh -o cbootanim.sh
 chmod +x cbootanim.sh
