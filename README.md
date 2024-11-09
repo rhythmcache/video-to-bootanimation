@@ -18,6 +18,7 @@ If you delete the `cfg` file or leave it empty, the module will automatically de
 ## Use On Linux Terminal or Termux
 - copy and paste this on termux or Linux terminal
 - creates a flashable magisk module
+- - Flash created zip in magisk or kernel su or aPatch
 ```
 curl -sSL https://github.com/rhythmcache/video-to-bootanimation/releases/download/v2/cbootanim.sh -o cbootanim.sh
 chmod +x cbootanim.sh
@@ -27,7 +28,6 @@ chmod +x cbootanim.sh
 ## Convert Bootanimation Zip to mp4 Video
 - this should convert most of the bootanimation zip to mp4
 - Paste this in Linux terminal or termux
-- Flash created zip in magisk or kernel su or aPatch
 
 ```
 curl -sSL https://github.com/rhythmcache/video-to-bootanimation/releases/download/v2/boot2mp4.sh -o boot2mp4.sh
