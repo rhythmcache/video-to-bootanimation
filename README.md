@@ -16,10 +16,10 @@ If you delete the `cfg` file or leave it empty, the module will automatically de
 
 
 ## Use On Linux Terminal or Termux
-- on terminals , it will just create a bootanimation zip , not a magisk module.
-
+- copy and paste this on termux or Linux terminal
+- creates a flashable magisk module
 ```
-curl -sSL https://github.com/rhythmcache/video-to-bootanimation/releases/download/v2/genbootanim.sh -o genbootanim.sh
+curl -sSL https://github.com/rhythmcache/video-to-bootanimation/releases/download/v2/cbootanim.sh -o cbootanim.sh
 chmod +x genbootanim.sh
 ./genbootanim.sh
 ```
