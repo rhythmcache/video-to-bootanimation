@@ -20,8 +20,8 @@ If you delete the `cfg` file or leave it empty, the module will automatically de
 - creates a flashable magisk module
 ```
 curl -sSL https://github.com/rhythmcache/video-to-bootanimation/releases/download/v2/cbootanim.sh -o cbootanim.sh
-chmod +x genbootanim.sh
-./genbootanim.sh
+chmod +x cbootanim.sh
+./cbootanim.sh
 ```
 
 ## Convert Bootanimation Zip to mp4 Video
