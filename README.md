@@ -40,7 +40,7 @@ chmod +x ./boot2mp4.sh
 
 
 #Questions?
-[ask here](https://t.me/ximimodulo)
+[ask here](https://t.me/ximistuffschat)
 
 
 #Download
