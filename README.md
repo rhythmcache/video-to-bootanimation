@@ -26,15 +26,6 @@ chmod +x cbootanim.sh
 ./cbootanim.sh
 ```
 
-## Convert Bootanimation Zip to mp4 Video
-- this should convert most of the bootanimation zip to mp4
-- Paste this in Linux terminal or termux
-
-```
-curl -sSL https://github.com/rhythmcache/video-to-bootanimation/releases/download/v2/boot2mp4.sh -o boot2mp4.sh
-chmod +x ./boot2mp4.sh
-./boot2mp4.sh
-```
 
 
 
