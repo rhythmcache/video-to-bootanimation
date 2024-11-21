@@ -185,9 +185,9 @@ ui_print "=================="
 }
 on_install() {
 unzip -o "$ZIPFILE" 'animation/*' -d $MODPATH >&2
-if [ -f "/product/media/bootanimation.zip" ]; then
-mkdir -p $MODPATH/product/media
-cp -f $MODPATH/animation/bootanimation.zip $MODPATH/product/media/
+if [ -f "/system/product/media/bootanimation.zip" ]; then
+mkdir -p $MODPATH/system/product/media
+cp -f $MODPATH/animation/bootanimation.zip $MODPATH/system/product/media/
 ui_print "Installing bootanimation to product/media"
 elif [ -f "/system/media/bootanimation.zip" ]; then
 mkdir -p $MODPATH/system/media
@@ -205,6 +205,7 @@ set_permissions() {
 set_perm_recursive $MODPATH/system/media 0 0 0755 0644
 set_perm_recursive $MODPATH/product/media 0 0 0755 0644
 }
+rm -rf $MODPATH/animation
 unity_custom() {
 : # Leave this empty unless adding custom installation/uninstallation logic
 }
