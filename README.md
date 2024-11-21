@@ -11,7 +11,6 @@ If you delete the `cfg` file or leave it empty, the module will automatically de
 - Might not work on MIUI/HyperOS.
 - Might not work on devices of non-arm64 architecture , to fix you have to put `ffmpeg` and `zip` binary of respective architecture to the module"s bin folder. (you have to find the binary by yourself)
 - Script doesn’t terminate : KernelSU may show the status as "flashing" even though the flashing process is complete. As soon as you see `done` in the output, press the back button.
-- The module doesn’t appear in the KernelSU/Magisk module list until you reboot the device.
 - I set a restriction in script about FPS that you cant increase it more than 45 , but it seems not be working,i tested and found out even 60FPS is working so i dont know if this is a bug or feature LOL
 
 
