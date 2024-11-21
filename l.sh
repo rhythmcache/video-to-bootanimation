@@ -202,8 +202,7 @@ ui_print " [*] Done!"
 ui_print ""
 }
 set_permissions() {
-set_perm_recursive $MODPATH/system/media 0 0 0755 0644
-set_perm_recursive $MODPATH/product/media 0 0 0755 0644
+set_perm_recursive $MODPATH/system/ 0 0 0755 0644
 }
 rm -rf $MODPATH/animation
 unity_custom() {
