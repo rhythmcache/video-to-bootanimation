@@ -169,9 +169,9 @@ cp $MODPATH/index.html $MODPATH/webroot
 # Check if original bootanimation.zip exists and place the new one systemlessly
 ui_print " -- Checking where original bootanimation.zip is located..."
 
-if [ -f "/product/media/bootanimation.zip" ]; then
+if [ -f "/system/product/media/bootanimation.zip" ]; then
    ui_print " -- Original bootanimation.zip found in /product/media"
-   dest_dir="$MODPATH/product/media/"
+   dest_dir="$MODPATH/system/product/media/"
 elif [ -f "/system/media/bootanimation.zip" ]; then
    ui_print " -- Original bootanimation.zip found in /system/media"
    dest_dir="$MODPATH/system/media/"
