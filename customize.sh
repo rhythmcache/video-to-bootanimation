@@ -190,15 +190,15 @@ ui_print " -- Bootanimation replaced systemlessly"
 ui_print " -- Done"
 ui_print " "
 
-# Set permissions for the module
-set_perm_recursive $MODPATH 0 0 0755 0644
-set_perm_recursive $MODPATH/system/media 0 0 0755 0755
-set_perm_recursive $MODPATH/product/media 0 0 0755 0755
-set_perm_recursive $MODPATH/system/product/media 0 0 0755 0755
-
-# Exit the 
-rm -R $MODPATH/bin
-rm -R /data/local/tmp/bootanim
+# Exiting
+rm -rf $MODPATH/bin
+rm -rf /data/local/tmp/bootanim
 rm $MODPATH/index.html
 rm $MODPATH/customize.sh
-exit 0
+
+# Set permissions for the module
+set_perm_recursive $MODPATH/system 0 0 0755 0644
+
+unity_custom() {
+: # Leave this empty unless adding custom installation/uninstallation logic
+}
