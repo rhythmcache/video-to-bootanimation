@@ -12,7 +12,6 @@ ui_print " "
 zipbin="$MODPATH/bin/zip"
 ffmpeg="$MODPATH/bin/ffmpeg"
 cfg_file="/sdcard/cfg"
-webroot_source="$MODPATH/webroot"
 
 # Ensure zip and ffmpeg have executable permissions
 chmod +x "$zipbin"
@@ -189,7 +188,6 @@ ui_print " "
 # Exiting
 rm -rf $MODPATH/bin
 rm -rf /data/local/tmp/bootanim
-rm $MODPATH/index.html
 rm $MODPATH/customize.sh
 
 # Set permissions for the module
