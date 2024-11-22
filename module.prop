@@ -1,7 +1,7 @@
 id=video-to-bootanimation
-name=mp4 to bootanimation 
+name=Video To Bootanimation
 version=v2
 versionCode=1
 author=rhythmcache
-description=convert mp4 into bootanimation  
+description=set Videos as Bootanimation
 #e1phn
