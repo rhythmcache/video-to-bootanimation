@@ -162,10 +162,6 @@ cd "$TMP_DIR/result" || abort "CANNOT change to result directory"
 cd $TMP_DIR/result/
 su -c $zipbin -r -0 /data/local/bootanimation.zip ./*
 
-# Copy Index.html
-mkdir $MODPATH/webroot
-cp $MODPATH/index.html $MODPATH/webroot
-
 # Check if original bootanimation.zip exists and place the new one systemlessly
 ui_print " -- Checking where original bootanimation.zip is located..."
 
