@@ -15,10 +15,10 @@ If you delete the `cfg` file or leave it empty, the module will automatically de
 
 
 
-- bugs or questions?
-[ask here](https://t.me/ximistuffschat)
+- found any bugs?
+  [tell here](https://t.me/ximistuffschat)
 
 
-#Download
+## Download
 
 [Download Latest Release](https://github.com/rhythmcache/video-to-bootanimation/releases/download/v2/video-to-bootanimation-main.zip)
