@@ -13,20 +13,6 @@ If you delete the `cfg` file or leave it empty, the module will automatically de
 - Script doesn’t terminate : KernelSU may show the status as "flashing" even though the flashing process is complete. As soon as you see `done` in the output, press the back button.
 
 
-## Use On Linux Terminal or Termux
-- copy and paste this on termux or Linux terminal
-- creates a flashable magisk module
-- no need to create cfg or rename video , script will prompt to enter path 
-- Flash created zip in magisk or kernel su or aPatch
-```
-curl -sSL https://github.com/rhythmcache/video-to-bootanimation/releases/download/v2/cbootanim.sh -o cbootanim.sh
-chmod +x cbootanim.sh
-./cbootanim.sh
-```
-
-
-
-
 
 #Questions?
 [ask here](https://t.me/ximistuffschat)
