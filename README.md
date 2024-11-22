@@ -1,4 +1,4 @@
-## mp4-to-bootanimation
+## video-to-bootanimation
 A Magisk/KernelSU script that sets an MP4 video as the android device's boot animation.
 
 ## How to Use
