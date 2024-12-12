@@ -24,3 +24,8 @@ If you delete the `cfg` file or leave it empty, the module will automatically de
 ## Download
 
 [Download Latest Release](https://github.com/rhythmcache/video-to-bootanimation/releases/download/v2/video-to-bootanimation-main.zip)
+
+
+---
+
+[![Telegram](https://img.shields.io/badge/Telegram-Join%20Chat-blue?style=flat-square&logo=telegram)](https://t.me/ximistuffschat)
