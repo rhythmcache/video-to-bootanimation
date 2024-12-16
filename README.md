@@ -23,7 +23,7 @@ If you delete the `cfg` file or leave it empty, the module will automatically de
 
 ## Download
 
-[Download Latest Release](https://github.com/rhythmcache/video-to-bootanimation/releases/download/v2/video-to-bootanimation-main.zip)
+[Download Latest Release](https://github.com/rhythmcache/video-to-bootanimation/releases/download/V3/video-to-bootanimation-main.zip)
 
 
 ---
